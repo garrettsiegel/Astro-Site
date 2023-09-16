@@ -1,12 +1,20 @@
 :root
   --background: #fff
+  --background-image: none
   --copy: #000
   --toggle: yellowgreen
 
 .alt-theme
   --background: #121212
+  --background-image: url(https://res.cloudinary.com/drxro4uha/image/upload/v1691984722/abstract4_zzkkwq.jpg)
   --copy: #fff
   --toggle: orangered
+
+  .headshotDesign
+    display: block !important
+  
+  .headshotDev
+    display: none !important
   
   // img
   //   display: none
@@ -20,8 +28,13 @@
   //   & + .alt
   //     display: block
 
+
 html
   background-color: var(--background)
+  background-image: var(--background-image)
+  background-size: cover
+  background-position: center
+  backround-repeat: none
   color: var(--copy)
   // font-family: sans-serif
   // font-weight: 700

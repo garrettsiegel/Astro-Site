@@ -2,10 +2,45 @@
 import BaseLayout from '../layouts/BaseLayout.astro'
 import Greeting from '../components/Greeting.jsx'
 // import NewComponent from '../components/NewComponent.jsx'
-const pageTitle = 'Home Page'
+const pageTitle = 'Garrett Siegel - Front End Developer'
+import { Image } from 'astro:assets';
+import headshotDev from '../assets/garrett-siegel-dev.jpg'
+import headshotDesign from '../assets/garrett-siegel-design.jpg'
+
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-  <!-- <h2>My awesome blog subtitle</h2>
-  <Greeting client:load messages={["Hi", "Hello", "Howdy", "Hey there"]} /> -->
+  <div class="homepage">
+    <Image class="headshotDev" src={headshotDev} alt="" />
+    <Image class="headshotDesign" src={headshotDesign} alt="" />
+    <h1>Garrett Siegel</h1>
+  </div>
+  
+
 </BaseLayout>
+
+<style lang="sass">
+  .homepage
+    height: 100vh
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+
+  .headshotDev, .headshotDesign
+    height: 250px
+    width: 250px
+    border-radius: 50%
+
+  .headshotDesign
+    display: none
+
+  h1
+    font-family: 'syne'
+    text-transform: uppercase
+    font-weight: 800
+    max-width: 500px
+    text-align: center
+    line-height: 0.8
+
+</style>
